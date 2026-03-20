@@ -1,15 +1,26 @@
 # LangChain RAG App (Version 1)
 
-RAG chat app powered by **Azure AI Foundry + LangChain**. Upload any file — PDF, DOCX, Excel, images, code — and ask questions. Documents are vectorized for retrieval, images are analyzed with vision.
+RAG chat app built with **Microsoft Azure AI Foundry**, **OpenAI Responses API**, and **LangChain v1.2+**. Upload any file — PDF, DOCX, Excel, images, code — and ask questions. Documents are vectorized for retrieval, images are analyzed with vision.
 
 > **First time?** Complete the [common setup](../README.md#quick-start-all-samples) in the root README before running this sample.
 
+## Key Technologies
+
+- **Azure AI Foundry** — Microsoft's new unified AI platform
+- **OpenAI Responses API** — latest API format with structured content blocks
+- **LangChain v1.2+** with `langchain-azure-ai` v1.1+ (`AzureAIOpenAIApiChatModel`)
+- **Streaming** — real-time token-by-token output with `stream_usage=True` for token tracking
+- **FAISS** — local vector store for fast similarity search
+- **Azure OpenAI Embeddings** — document vectorization (e.g., `text-embedding-ada-002`)
+- **DefaultAzureCredential** — enterprise-grade Azure authentication
+- **Gradio v6.9+** — modern web GUI with inline file upload
+
 ## Features
 
-- **RAG**: Upload documents → auto-vectorized → relevant context retrieved per question
+- **RAG** via Responses API: Upload documents → auto-vectorized → relevant context retrieved per question
 - **20+ file types**: PDF, DOCX, TXT, CSV, XLSX, PPTX, HTML, Markdown, JSON, Python, JS, XML, YAML, logs
-- **Image analysis**: PNG, JPG, GIF, WebP, BMP — analyzed using GPT vision
-- **Streaming responses** with token usage tracking (hover the 🔢 badge)
+- **Image analysis**: PNG, JPG, GIF, WebP, BMP — analyzed using GPT vision via multimodal Responses API
+- **Streaming responses** with live token usage tracking (hover the 🔢 badge for input/output/total)
 - **AI-generated follow-up suggestions** after each response
 - **Auto-process**: Files are processed the moment you upload — no extra button needed
 

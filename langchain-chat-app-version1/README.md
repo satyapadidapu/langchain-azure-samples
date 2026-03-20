@@ -1,12 +1,21 @@
 # LangChain Chat App (Version 1)
 
-Streaming chat app powered by **Azure AI Foundry + LangChain** with AI-generated follow-up suggestions.
+Streaming chat app built with **Microsoft Azure AI Foundry**, **OpenAI Responses API**, and **LangChain v1.2+**.
 
 > **First time?** Complete the [common setup](../README.md#quick-start-all-samples) in the root README before running this sample.
 
+## Key Technologies
+
+- **Azure AI Foundry** — Microsoft's new unified AI platform
+- **OpenAI Responses API** — latest API format with structured content blocks
+- **LangChain v1.2+** with `langchain-azure-ai` v1.1+ (`AzureAIOpenAIApiChatModel`)
+- **Streaming** — real-time token-by-token output via `model.stream()`
+- **DefaultAzureCredential** — enterprise-grade Azure authentication
+- **Gradio v6.9+** — modern web GUI
+
 ## Features
 
-- Real-time streaming responses (token by token)
+- Real-time streaming responses (token by token) via Responses API
 - Multi-turn conversation with full history
 - AI-generated follow-up suggestions after each response
 - One-click suggestion to continue the conversation
