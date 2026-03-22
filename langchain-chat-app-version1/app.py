@@ -1,3 +1,4 @@
+import re
 import gradio as gr
 from llm_backend import stream_response, get_suggestions
 
@@ -11,6 +12,11 @@ def _get_text(content):
     return str(content)
 
 
+def _strip_tooltip(text):
+    """Remove the token-usage badge from message text."""
+    return re.sub(r'\s*---\s*🔢 \*\*\d+ tokens\*\*.*$', '', text, flags=re.DOTALL)
+
+
 def _build_paired_history(chat_history):
     """Build (user, assistant) tuples from chat history."""
     paired = []
@@ -18,7 +24,9 @@ def _build_paired_history(chat_history):
         u = chat_history[i]
         a = chat_history[i + 1]
         if u["role"] == "user" and a["role"] == "assistant":
-            paired.append((_get_text(u["content"]), _get_text(a["content"])))
+            a_text = _get_text(a["content"])
+            a_text = _strip_tooltip(a_text)
+            paired.append((_get_text(u["content"]), a_text))
     return paired
 
 
@@ -35,8 +43,21 @@ def bot_respond(chat_history):
 
     chat_history = chat_history + [{"role": "assistant", "content": ""}]
     partial = ""
+    usage_info = None
     for token in stream_response(user_message, paired):
-        partial += token
+        if isinstance(token, dict) and "__usage__" in token:
+            usage_info = token["__usage__"]
+        else:
+            partial += token
+            chat_history[-1] = {"role": "assistant", "content": partial}
+            yield chat_history
+
+    # Append token usage badge after streaming completes
+    if usage_info:
+        badge = (f"\n\n---\n"
+                 f"🔢 **{usage_info['total']} tokens** "
+                 f"(Input: {usage_info['input']} | Output: {usage_info['output']})")
+        partial += badge
         chat_history[-1] = {"role": "assistant", "content": partial}
         yield chat_history
 

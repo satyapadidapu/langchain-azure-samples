@@ -24,3 +24,6 @@ Thumbs.db
 
 # Misc
 Misc/
+
+# Test files
+_test_*.py

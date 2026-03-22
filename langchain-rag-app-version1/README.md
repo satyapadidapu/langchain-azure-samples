@@ -1,12 +1,12 @@
 # LangChain RAG App (Version 1)
 
-RAG chat app built with **Microsoft Azure AI Foundry**, **OpenAI Responses API**, and **LangChain v1.2+**. Upload any file — PDF, DOCX, Excel, images, code — and ask questions. Documents are vectorized for retrieval, images are analyzed with vision.
+RAG chat app built with **Microsoft Foundry**, **OpenAI Responses API**, and **LangChain v1.2+**. Upload any file — PDF, DOCX, Excel, images, code — and ask questions. Documents are vectorized for retrieval, images are analyzed with vision.
 
 > **First time?** Complete the [common setup](../README.md#quick-start-all-samples) in the root README before running this sample.
 
 ## Key Technologies
 
-- **Azure AI Foundry** — Microsoft's new unified AI platform
+- **Microsoft Foundry** — new unified AI platform
 - **OpenAI Responses API** — latest API format with structured content blocks
 - **LangChain v1.2+** with `langchain-azure-ai` v1.1+ (`AzureAIOpenAIApiChatModel`)
 - **Streaming** — real-time token-by-token output with `stream_usage=True` for token tracking
@@ -39,7 +39,7 @@ This sample uses variables from the `.env` file in the repo root:
 
 | Variable | Required | Description |
 |---|---|---|
-| `AZURE_AI_PROJECT_ENDPOINT` | Yes | Azure AI Foundry project endpoint |
+| `AZURE_AI_PROJECT_ENDPOINT` | Yes | Microsoft Foundry project endpoint |
 | `AZURE_AI_API_KEY` | Yes | API key for your Azure AI resource |
 | `MODEL_DEPLOYMENT_NAME` | Yes | Deployed chat model (e.g., `gpt-4.1`) |
 | `AZURE_OPENAI_ENDPOINT` | Yes | OpenAI-compatible endpoint (for embeddings) |

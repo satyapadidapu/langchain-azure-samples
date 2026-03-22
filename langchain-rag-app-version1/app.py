@@ -73,8 +73,8 @@ def user_submit(message, chat_history):
 
 
 def _strip_tooltip(text):
-    """Remove the token-usage tooltip from message text."""
-    return re.sub(r'\s*<span title="[^"]*" style="[^"]*">.*?</span>\s*$', '', text)
+    """Remove the token-usage badge from message text."""
+    return re.sub(r'\s*---\s*🔢 \*\*\d+ tokens\*\*.*$', '', text, flags=re.DOTALL)
 
 
 def bot_respond(chat_history):
@@ -97,14 +97,11 @@ def bot_respond(chat_history):
             chat_history[-1] = {"role": "assistant", "content": partial}
             yield chat_history
 
-    # Append token usage tooltip after streaming completes
+    # Append token usage badge after streaming completes
     if usage_info:
-        tooltip_text = (f"Tokens — Input: {usage_info['input']} | "
-                        f"Output: {usage_info['output']} | "
-                        f"Total: {usage_info['total']}")
-        badge = (f'\n\n<span title="{tooltip_text}" style="cursor:help; '
-                 f'font-size:0.75em; color:#888; border-bottom:1px dotted #888;">'
-                 f'🔢 {usage_info["total"]} tokens</span>')
+        badge = (f"\n\n---\n"
+                 f"🔢 **{usage_info['total']} tokens** "
+                 f"(Input: {usage_info['input']} | Output: {usage_info['output']})")
         partial += badge
         chat_history[-1] = {"role": "assistant", "content": partial}
         yield chat_history

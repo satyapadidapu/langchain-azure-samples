@@ -13,6 +13,7 @@ model = AzureAIOpenAIApiChatModel(
     credential=credential,
     model=os.environ["MODEL_DEPLOYMENT_NAME"],
     temperature=0.7,
+    stream_usage=True,
 )
 
 SYSTEM_PROMPT = "You are a helpful AI assistant. Answer clearly and concisely."
@@ -39,9 +40,20 @@ def stream_response(user_prompt, chat_history=None):
 
     messages.append(HumanMessage(content=user_prompt))
 
+    usage = None
     for chunk in model.stream(messages):
+        meta = getattr(chunk, "usage_metadata", None)
+        if meta:
+            usage = meta
         if chunk.text:
             yield chunk.text
+
+    # Yield a sentinel with token usage info after streaming completes
+    if usage:
+        input_tokens = usage.get("input_tokens", 0)
+        output_tokens = usage.get("output_tokens", 0)
+        total = input_tokens + output_tokens
+        yield {"__usage__": {"input": input_tokens, "output": output_tokens, "total": total}}
 
 
 def get_suggestions(chat_history):
