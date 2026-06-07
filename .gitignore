@@ -3,6 +3,7 @@
 .venv/
 venv/
 foundry-langchain-env/
+videoenvgen/
 
 # Python
 __pycache__/
@@ -24,6 +25,9 @@ Thumbs.db
 
 # Misc
 Misc/
+
+# LinkedIn articles (keep local, never publish)
+LINKEDIN_ARTICLE.md
 
 # Test files
 _test_*.py

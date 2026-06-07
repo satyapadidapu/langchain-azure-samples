@@ -1,0 +1,41 @@
+ANTARA STUDIOS — AI Video Generator Prompt
+============================================
+Paste this into the "Video Prompt" field. Upload ANTARA_PORTFOLIO_FINAL.pdf as the file.
+Settings: Duration = 90 seconds | Voice = Female | Language = English | Avatar = Riya (Indian Female)
+
+---
+
+PROMPT TO PASTE:
+---
+
+Create a professional 90-second promotional video for ANTARA STUDIOS, a premium interior design firm in Bangalore, India. Tagline: "Every Space Has A Story."
+
+AVATAR INTRO (the avatar should say):
+"Hi, I'm Antara — and welcome to Antara Studios, where every space has a story."
+
+CONTENT SCENES (cinematic B-roll with voiceover narration):
+
+Scene 1 — WHO WE ARE:
+Visual: Cinematic slow dolly forward through a luxurious modern Indian living room at golden hour. Cream sofa, brown leather pouf, marble accents, warm amber lighting from a Sputnik chandelier. Bangalore skyline through floor-to-ceiling windows. Shallow depth of field, warm color grade.
+Narration: "Since 2013, we've been transforming homes, offices, and commercial spaces across Bangalore into immersive experiences — where creativity meets craftsmanship, and design meets daily life."
+
+Scene 2 — OUR SERVICES:
+Visual: Fast cinematic montage of premium Indian apartment interiors — modular white-and-wood kitchen with under-cabinet lighting, elegant bedroom with backlit gold-fluted headboard, floor-to-ceiling white wardrobe with brass handles, illuminated pooja unit with backlit Om symbol in turquoise glow, wall-mounted TV entertainment unit with rust-red wood paneling. Each shot is a slow dolly-in. Warm cinematic color grade.
+Narration: "From turnkey home interiors to modular kitchens, custom wardrobes, pooja units, false ceilings, and full renovations — we deliver complete, end-to-end solutions, all crafted in our own in-house factory."
+
+Scene 3 — FEATURED PROJECTS:
+Visual: Cinematic slow-motion reveals of luxury residential interiors — statement living room with yellow accent chairs and marble Buddha alcove, then a modern office space with clean lines, then a premium apartment bedroom. Ken Burns push-in effect on each. Professional, aspirational mood.
+Narration: "Our work spans cozy bedrooms, statement living rooms, and large commercial projects like Sumadhura Logistics Park. Whatever the kitchen layout — Straight, L-shaped, Island, or Peninsula — we design around how you live."
+
+Scene 4 — WHY CHOOSE US (FACTORY):
+Visual: Documentary-style close-ups inside a modern furniture factory — CNC wood-cutting machine in operation with sawdust catching warm light, craftsman's hands sanding a smooth wood panel, edge-banding machine running a board through. Cinematic, professional, warm lighting. Conveys precision and pride.
+Narration: "What sets us apart? An obsession with detail, partnerships with brands like Hafele, Hettich, Ebco, and Greenply, a 5-year workmanship warranty, and pricing that respects your budget."
+
+Scene 5 — CLIENT TRUST:
+Visual: Warm emotive shots of a happy Indian family in their beautifully designed modern living room, golden hour light streaming in. A couple admiring their new home interior. Aspirational, intimate, joyful. Soft warm color grade.
+Narration: "From over six hundred happy clients across Bangalore, Mysore, and Mangalore — your story is the one we love telling most."
+
+AVATAR OUTRO (the avatar should say):
+"Let's design together. Visit antarastudios.com, call us at 8-1-2-3-2-7-8-5-3-6, or come see us at Balagere Road, Varthur, Bengaluru. Antara Studios — every space has a story."
+
+STYLE: Premium, warm, sophisticated. Slow camera movements, golden-hour lighting, shallow depth of field. No people in B-roll scenes (interiors only). Brand colors: chocolate-brown and rose-gold.
